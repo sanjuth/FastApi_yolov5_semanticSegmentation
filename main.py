@@ -16,7 +16,7 @@ from keras_segmentation.predict import predict
 
 def get_fcn():
     model_seg = fcn_32_resnet50(n_classes=14 ,  input_height=480, input_width=832 )
-    model_seg.load_weights('./tmp/dgx_train')
+    model_seg.load_weights('./semantic_weights/fcn')
     return model_seg
 
 def get_yolov5():
